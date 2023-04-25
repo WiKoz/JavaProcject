@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #82B0F5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Pierwsza">
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="298.0" style="-fx-background-color: #99BFF7;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="297.0" layoutY="1.0">
+               <image>
+                  <Image url="@../images/obrazek.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="close" layoutX="269.0" layoutY="-1.0" mnemonicParsing="false" onAction="#Zamknij" style="-fx-background-color: #99BFF7;" text="X" textFill="#0d2a94">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="31.0" layoutY="200.0" text="Witamy w ForHealth!" textFill="#0d2a94">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="zaloguj" layoutX="102.0" layoutY="255.0" mnemonicParsing="false" onAction="#Logowanie" style="-fx-background-color: #99BFF7;" text="Zaloguj się" textFill="#0d2a94">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="zarejestruj" layoutX="91.0" layoutY="301.0" mnemonicParsing="false" onAction="#Rejestracja" style="-fx-background-color: #99BFF7;" text="Zarejestruj się" textFill="#0d2a94">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="76.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

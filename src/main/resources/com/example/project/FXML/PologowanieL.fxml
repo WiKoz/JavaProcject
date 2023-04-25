@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="722.0" style="-fx-background-color: #BE93D4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.PologowanieL">
+   <top>
+      <HBox alignment="CENTER" layoutX="7.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" style="-fx-background-color: #E39FF6;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="strG" alignment="CENTER" mnemonicParsing="false" onAction="#Glowna" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #9E7BB5;" text="Strona główna" textFill="#710193">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <MenuButton fx:id="wizyty" alignment="CENTER" mnemonicParsing="false" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #9E7BB5;" text="Wizyty" textFill="#710193">
+              <items>
+                <MenuItem fx:id="wizytyZob" mnemonicParsing="false" onAction="#ZobaczenieWizyt" text="Zobacz wizyty" />
+                <MenuItem fx:id="wizytyUm" mnemonicParsing="false" onAction="#UmowienieWiz" text="Umów wizytę" />
+              </items>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="recepty" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #9E7BB5;" text="Recepty" textFill="#710193">
+              <items>
+                <MenuItem fx:id="receptyZob" mnemonicParsing="false" onAction="#ZobaczenieWiz" text="Wyświetl recepty" />
+                <MenuItem fx:id="receptyNow" mnemonicParsing="false" onAction="#NowaRec" text="Wypisz receptę" />
+              </items>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="konto" alignment="CENTER" mnemonicParsing="false" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #9E7BB5;" text="Konto" textFill="#710193">
+              <items>
+                <MenuItem fx:id="wyloguj" mnemonicParsing="false" onAction="#Wylogowanie" text="Wyloguj się" />
+              </items>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </MenuButton>
+            <Button fx:id="zamknij" alignment="CENTER" layoutX="82.0" layoutY="19.0" mnemonicParsing="false" onAction="#zamknij" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #9E7BB5;" text="Wyjście" textFill="#710193">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <ImageView fx:id="obrazek" fitHeight="207.0" fitWidth="239.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+   </center>
+   <bottom>
+      <Text fx:id="przywitanie" fill="#710193" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Witamy w ForHealth" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+   </bottom>
+   <left>
+      <ScrollPane fx:id="scrollPane" prefHeight="382.0" prefWidth="244.0" visible="false" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="doWyswietlania" prefHeight="381.0" prefWidth="244.0" />
+         </content>
+      </ScrollPane>
+   </left>
+   <right>
+      <VBox fx:id="panelWpisywania" alignment="CENTER_LEFT" prefHeight="382.0" prefWidth="243.0" spacing="10.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="napisLeki" fill="#710193" strokeType="OUTSIDE" strokeWidth="0.0" text="Leki" />
+            <TextField fx:id="leki" promptText="Leki" />
+            <Text fx:id="opisWejsciaPierwszego" fill="#710193" strokeType="OUTSIDE" strokeWidth="0.0" text="Imię" wrappingWidth="47.51092529296875" />
+            <TextField fx:id="wejsciePierwsze" promptText="Imie" />
+            <Text fx:id="opisWejsciaDrugiego" fill="#710193" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
+            <TextField fx:id="wejscieDrugie" promptText="Nazwisko" />
+            <DatePicker fx:id="datePicker" promptText="Data" />
+            <Text fx:id="bledneDane" strokeType="OUTSIDE" strokeWidth="0.0" text="Niepoprawne dane" />
+            <Button fx:id="submitButton" mnemonicParsing="false" style="-fx-background-color: #9E7BB5;" text="Zatwierdz" textFill="#710193">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="zatwierdz" layoutX="10.0" layoutY="313.0" mnemonicParsing="false"  style="-fx-background-color: #9E7BB5;" text="Zatwierdz" textFill="#710193">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="usuwanko" layoutX="10.0" layoutY="335.0" mnemonicParsing="false"  style="-fx-background-color: #9E7BB5;" text="Usuń wizytę" textFill="#710193">
+              <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

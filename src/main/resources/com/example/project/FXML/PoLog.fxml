@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="722.0" style="-fx-background-color: #82B0F5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.PologowanieP">
+   <top>
+      <AnchorPane prefHeight="87.0" prefWidth="800.0" style="-fx-background-color: #99bff7;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="1.0" prefHeight="100.0" prefWidth="722.0" spacing="7.0">
+               <children>
+                  <Button fx:id="glowna" mnemonicParsing="false" onAction="#Strona" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #89abde;" text="Strona główna" textFill="#0d2a94">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="wizyty" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" onAction="#Wizyty" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #89abde;" text="Wizyty" textFill="#0d2a94">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="recepty" layoutX="149.0" layoutY="19.0" mnemonicParsing="false" onAction="#Recepty" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #89abde;" text="Recepty" textFill="#0d2a94">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <MenuButton fx:id="konto" alignment="CENTER" mnemonicParsing="false" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #89abde;" text="Konto" textFill="#0d2a94">
+                    <items>
+                      <MenuItem fx:id="wyloguj" mnemonicParsing="false" onAction="#Wyloguj" text="Wyloguj" />
+                    </items>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </MenuButton>
+                  <Button fx:id="doZamkniecia" layoutX="375.0" layoutY="19.0" mnemonicParsing="false" onAction="#Wylacz" prefHeight="82.0" prefWidth="139.0" style="-fx-background-color: #89abde;" text="Wyjście" textFill="#0d2a94">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <ImageView fitHeight="207.0" fitWidth="239.0">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+   </center>
+   <bottom>
+      <Text fill="#0d2a94" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Witamy w ForHealth" wrappingWidth="240.06645822525024" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+   </bottom>
+   <left>
+      <ScrollPane fx:id="scroll" prefHeight="382.0" prefWidth="270.0" style="-fx-background-color: #99bff7;" visible="false" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="doWyswietlania" prefHeight="383.0" prefWidth="264.0" style="-fx-background-color: #89abde;" />
+         </content>
+      </ScrollPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="382.0" prefWidth="217.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
